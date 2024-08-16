@@ -43,8 +43,9 @@ public class User {
     private List<User> followers;
     private List<User> following;
     private List<Post> posts;
+    private Boolean professional;
 
-    public User(String id, String nome, String email, Date birthDate, String password){
+    public User(String id, String nome, String email, Date birthDate, String password, Boolean professional){
         this.id = UUID.randomUUID().toString(); //gera um id
         this.name = name;
         this.email = email;
@@ -54,6 +55,7 @@ public class User {
         this.followers = new ArrayList<>();
         this.following = new ArrayList<>();
         this.posts = new ArrayList<>();
+        this.professional = professional;
     }
 
     public String getName() {
